@@ -1,15 +1,30 @@
-Youtube Music Songrequest Bot for Twitch
+# 🎵 YouTube Music Songrequest Bot for Twitch
 
-This is a lightweight background running program that lets viewers request songs and adds them automatically in a queue system. The base YTM app used for this is https://github.com/pear-devs/pear-desktop.
-!! Other YTM music apps won't work since they will use different backend routes and ports. 
+A lightweight, background-running application that allows your Twitch viewers to request songs, automatically adding them to a queue system. 
 
-Functions:
-• Window that shows your next songs and who they were requested by as well as deletion per click from queue
-• Let users request Youtube Music Songs with the via Raw input or Youtube Links with Channel Points or Commands
-• Commands that let you display the Queue and the current song 
-• Skip Songs via Channel Points or as Command (Mod only standard)
-• Customize a Browser Overlay for OBS that displays the song
-• Block artists or users from the Songrequests
-• Dual PC Support
-• Have a maximum amount of time per song (standard 10min)
-• Enable Auto Start with Windows
+> ⚠️ **IMPORTANT REQUIREMENT**
+> The base application used for this bot is **[Pear Desktop](https://github.com/pear-devs/pear-desktop)**. 
+> *Other YouTube Music desktop apps will **not** work, as they use different backend API routes and ports.*
+
+---
+
+## ✨ Features
+
+* 🎛️ **Interactive Dashboard** * View upcoming songs and see exactly who requested them.
+  * Delete specific songs from the queue with a single click.
+
+* 💬 **Viewer Song Requests** * Users can request songs using raw text input (search) or direct YouTube links.
+  * Supports requests via **Channel Points** or **Chat Commands**.
+
+* ⏭️ **Skip Functionality** * Skip the current song via Channel Point rewards or a Chat Command (default: Moderators only).
+
+* 📜 **Info Commands** * Let your chat easily display the current playing song and the upcoming queue.
+
+* 📺 **OBS Web-Overlay** * Includes a built-in, fully customizable browser overlay for OBS to display the current track and artist on your stream.
+
+* 🛡️ **Moderation Tools** * **Blocklists:** Restrict specific artists or users from using the song request feature.
+  * **Duration Limit:** Set a maximum allowed time per song (standard is 10 minutes) to prevent overly long tracks.
+
+* 💻 **Dual PC Support** * Seamlessly works across Dual PC streaming setups (run the bot on the streaming PC while music plays on the gaming PC).
+
+* ⚙️ **Autostart** * Option to automatically launch the program silently in the background when Windows starts.
