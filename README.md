@@ -47,9 +47,13 @@ Zuschauer wünschen sich Songs per Chat-Befehl oder Kanalpunkte, der Bot sucht s
 - Volle Warteschlangenansicht separat einsehbar
 
 **OBS-Overlay**
-- Zeigt Cover, Titel, Artist und einen Fortschrittsbalken mit Sekundenanzeige (live, ohne sichtbares "Springen")
+- Zeigt Cover, Titel, Artist und einen Fortschrittsbalken mit sekundengenauer, flüssiger Zeitanzeige
+- Reagiert auf die Musik: pulsiert im Takt und zeigt einen Equalizer (liest das gewählte Wiedergabegerät mit)
+- Akzentfarbe passt sich automatisch dem Cover an, Cover als unscharfer Hintergrund
+- „Wunsch von …“-Badge zeigt, wer den laufenden (und den nächsten) Song gewünscht hat
 - "Als Nächstes"-Panel: dauerhaft sichtbar oder blendet sich automatisch kurz vor Songende ein
-- Vollständig im Browser konfigurierbar (Farben, Transparenz, Eckenradius, Breite, Scroll-Geschwindigkeit) mit Live-Vorschau – kein Editieren von Dateien nötig
+- Frei skalierbar, optional bei Pause automatisch ausblenden
+- Vollständig im Browser konfigurierbar (Größe, Farben, Transparenz, Effekte …) mit Live-Vorschau – kein Editieren von Dateien nötig
 - Läuft als eigener kleiner Webserver, URL wird einfach als Browser-Quelle in OBS eingefügt
 
 **Sonstiges**
@@ -117,6 +121,7 @@ Unter **Song Request → Antworttexte** lassen sich alle Chat-Antworten frei anp
 2. Auf **„⚙️ Overlay-Konfiguration im Browser öffnen"** klicken.
 3. Im Browser Design, Farben, Größe etc. nach Wunsch einstellen (wirkt sofort in der Live-Vorschau) und rechts oben auf **„Link für OBS kopieren"** klicken.
 4. In OBS: **Quelle hinzufügen → Browser-Quelle** → Link einfügen → Breite/Höhe entsprechend der im Konfigurator angezeigten Empfehlung setzen.
+5. Für Takt-Effekte und Equalizer im Tab **OBS Overlay** unter **Audio** das Wiedergabegerät wählen, auf dem deine Musik läuft (Standard: Windows-Standardgerät).
 
 <p align="center">
   <img src="assets/screenshot-songrequest.png" width="70%" alt="Song Request Einstellungen">
@@ -137,6 +142,8 @@ Läuft die Musik (Pear Desktop) auf einem **anderen** PC als der Bot (z. B. sepa
 | Warteschlange | `!q`, `!queue` | Alle | Zeigt die nächsten Songs |
 | Skip | `!skip` | Mods | Überspringt den aktuellen Song |
 | Letzter Song | `!lastsong`, `!prev` | Alle | Zeigt den zuletzt gespielten Song |
+| Wunsch zurück | `!undo`, `!wrongsong` | Alle | Entfernt den eigenen letzten Wunsch aus der Warteschlange (Kanalpunkte werden erstattet). Mods: `!undo @name` |
+| Vote-Skip | `!voteskip`, `!vs` | Alle | Stimme zum Überspringen – ab der eingestellten Stimmenzahl (Standard 3) wird geskippt |
 
 Aliase und Berechtigungen sind pro Befehl frei einstellbar (siehe [Befehle & Berechtigungen](#3-befehle--berechtigungen)).
 
